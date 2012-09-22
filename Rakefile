@@ -39,8 +39,36 @@ namespace :install do
 
   desc 'Check for and install required dependencies.'
   task :deps do
+    # Homebrew
+    puts 'Please install homebrew' and exit 1 unless system 'which brew'
+
     puts 'Please install bundler and re-run installation. http://gembundler.com/' and exit 1 unless system 'which bundle'
     system 'bundle install'
+  end
+
+  desc 'Install required brew formulae'
+  task :formulae do
+    %w(git node solr).each do |f|
+      system "brew install #{f}"
+    end
+  end
+
+  desc 'Install required npm packages'
+  task :npm do
+    unless system 'which npm'
+      system 'curl https://npmjs.org/install.sh | sh'
+    end
+
+    %w(n coffee-script stylus).each do |f|
+      system "npm install -g #{f}"
+    end
+  end
+
+  desc 'Install ruby'
+  task :ruby do
+    puts 'Installing ruby 1.9.3-p125 via rbenv install'
+    system 'rbenv install 1.9.3-p125'
+    system 'rbenv global 1.9.3-p125'
   end
 
   desc 'Copy dotfiles over to home dir.'
@@ -52,6 +80,14 @@ namespace :install do
 
   desc 'Run post-install tasks.'
   task :post do
+    puts "Linking ST2 packages"
+
+    package_source = '~/.dotfiles/.sublime_packages'
+    package_target = '~/Library/Application\ Support/Sublime\ Text\ 2/Packages'
+
+    system "rm #{package_target}"
+    system "ln -sF #{package_source} #{package_target}"
+
     puts "\n\n\n##################################################"
     puts "Don't forget to edit your git config: ~/.gitconfig"
   end
