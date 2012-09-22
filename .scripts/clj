@@ -9,7 +9,7 @@ cljclass='clojure.main'
 cljcompletions="$HOME/.clj_completions"
 
 CP=$CLASSPATH:${cljjar}
-CP=$CP:"/Users/gianni/Projects/clojure/clojure-contrib-1.3.0-SNAPSHOT.jar"
+CP=$CP:"/Users/Eric/Projects/clojure/clojure-contrib-1.3.0-SNAPSHOT.jar"
 CP=$CP:${PWD}
 
 # Add extra jars as specified by `.clojure` file
@@ -23,4 +23,3 @@ if [ $# -eq 0 ]; then
 else
   exec java -classpath $CP $cljclass $*
 fi
-

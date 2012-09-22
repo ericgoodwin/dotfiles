@@ -40,7 +40,6 @@ notice "Checking dependencies"
 dep "git"  "1.7"
 dep "hg"   "1.6"
 dep "ruby" "1.8"
-dep "vim" "7.3"
 dep "tree" "1.5"
 
 if [ "${#missing[@]}" -gt "0" ]; then
@@ -66,7 +65,7 @@ if [ -d ~/.dotfiles ]; then
 else
   # --- Clone Repo --- #
   notice "Downloading"
-  git clone --recursive git://github.com/gf3/dotfiles.git ~/.dotfiles
+  git clone --recursive git://github.com/ericgoodwin/dotfiles.git ~/.dotfiles
 
   # --- Install --- #
   notice "Installing"

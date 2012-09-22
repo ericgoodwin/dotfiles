@@ -17,12 +17,53 @@ alias h="history"
 alias httpdump="sudo tcpdump -i en1 -n -s 0 -w - | grep -a -o -E \"Host\: .*|GET \/.*\""
 alias ip="curl -s http://checkip.dyndns.com/ | sed 's/[^0-9\.]//g'"
 alias localip="ipconfig getifaddr en1"
-alias mp="mvim -p"
 alias rkt="racket -il xrepl"
 alias tmux="tmux -2"
-alias view="vim -p -R"
-alias vp="vim -p"
 
-# Sync
-alias sync_irc="rsync -avz ~/Sites/IRC/ talos:/mnt/www/irc.gf3.ca/public"
+# Git Aliases
+alias gst='git status'
+alias gl='git pull'
+alias gp='git push'
+alias gph='git push heroku'
+alias gd='git diff | mate'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gb='git branch --color'
+alias gba='git branch -a'
+alias gco='git checkout'
+alias git co='git checkout'
+alias diffp='git log --stat production..master' 	# see the differences between production and master
+alias notpushed='git cherry -v origin' 						# see the all commits that I haven't pushed yet
+alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gitlogold='git log --pretty=oneline --abbrev-commit'
+
+# REDIS
+alias redis='redis-cli'
+
+# CLOJURE
+alias lc='lein repl'
+alias li='lein install org.clojure/'
+
+# RAILS
+alias rails='bundle exec rails' 
+alias rc='bundle exec rails c'
+alias rs='bundle exec rails s -p 3000'
+alias be='bundle exec'
+alias bi='bundle install --without=production'
+alias migrateonly='bundle exec rake db:migrate'
+alias migrate='bundle exec rake db:migrate && ann && prepare'
+alias prepare='bundle exec rake db:test:prepare'
+alias ann="bundle exec annotate --position='before' --exclude tests,fixtures --show-indexes"
+alias seed="resetdb"
+alias stats="bundle exec rake stats"
+alias rake="bundle exec rake"
+alias resetdb="bundle exec rake db:reset"
+alias autotest="bundle exec autotest"
+alias docs="bundle exec rake doc:reapp"
+alias diagram="bundle exec rake erd"
+alias ssstart="bundle exec rake sunspot:solr:start"
+alias ssstop="bundle exec rake sunspot:solr:stop"
+alias ssindex="bundle exec rake sunspot:solr:reindex"
+alias rspec="bundle exec rspec"
+alias spec="bundle exec rake spec"
 

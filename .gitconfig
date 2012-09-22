@@ -1,8 +1,8 @@
 [user]
-  name = Gianni Chiappetta
-  email = EMAIL
+  name = Eric Goodwin
+  email = eric@ericgoodwin.com
 [github]
-  user = gf3
+  user = ericgoodwin
   token = TOKEN
 [alias]
   br = branch

@@ -7,13 +7,12 @@ Prerequisites
 * Git (1.7+)
 * Mercurial (1.6+)
 * Ruby (1.9 recommended) and RubyGems
-* Vim (7.3+)
 * Tree
 
 Optional, but recommended:
 
 * ZSH
-* [rbenv](http://rbenv.org) or [RVM](http://rvm.beginrescueend.com/)
+* [rbenv](http://rbenv.org)
 * [Homebrew](http://mxcl.github.com/homebrew/) (OS X only)
 
 
@@ -26,7 +25,7 @@ have ruby and ruby gems installed on your system: `gem install rake bundler`.
 Then:
 
 ``` bash-session
-$ zsh < <( curl https://raw.github.com/gf3/dotfiles/master/bootstrap.sh )
+$ zsh < <( curl https://raw.github.com/ericgoodwin/dotfiles/master/bootstrap.sh )
 ```
 
 Don't worry, all your old files will be backed up!
@@ -40,71 +39,6 @@ Run the bootstrapper again!
 ``` bash-session
 $ ~/.dotfiles/bootstrap.sh
 ```
-
-
-Vim
-===
-
-Overview of the vim setup. Sensible defaults for all the things!
-
-
-Mappings
---------
-
-Reference to vim mappings.
-
-
-### General
-
-* `,c` Toggle invisibles.
-* `,ls` Show buffers (same as `:buffers`).
-* `,p` Toggle paste mode.
-* `,qs` Toggle search highlight.
-* `,qq` Close Quickfix window (think Ack.vim).
-* `,rp` Toggle Rainbow Parenthesis.
-* `,ss` Strip all trailing whitespace in buffer.
-* `,W` Sudo write!
-* `Y` Yank from cursor to end of line (same as `y$`).
-* `,*` Replace word under cursor.
-* `,]` Indent current block.
-* `,[` Outdent current block.
-* `,⏎` Insert newline.
-* `'` Actually calls <code>`</code> for better mark jumping (line + column).
-* `J` Join lines and restore cursor position.
-
-Some handy aliases for hard to type things that I use often:
-
-* `>>` to `→`
-* `<<` to `←`
-* `^^` to `↑`
-* `VV` to `↓`
-* `aa` to `λ`
-
-As well `↑`, `↓`, `⏎`, and `⎋` may be used in completions menus. `<PageUp>` and `<PageDown>` work in both insert and command mode.
-
-
-### Splits
-
-* `+` Increase split size.
-* `-` Decrease split size.
-* `^j` Go to split below.
-* `^k` Go to split above.
-* `^h` Go to split left.
-* `^l` Go to split right.
-
-
-### Markdown
-
-* `,mp` Preview markdown buffer with Github styles.
-* `,mf` Render markdown buffer to html in a file.
-* `,mt` Render markdown buffer to html in a tab.
-
-
-Commands
-========
-
-* `:W` Alias to `:w` because I'm always typing it.
-
 
 Plugins
 =======
@@ -154,14 +88,14 @@ Shell
 =====
 
 Most of the shell junk is setup to work in both zsh and bash. Bash users should
-see [.bash_profile](https://github.com/gf3/dotfiles/blob/master/.bash_profile)
-and [.bash_prompt](https://github.com/gf3/dotfiles/blob/master/.bash_prompt).
+see [.bash_profile](https://github.com/ericgoodwin/dotfiles/blob/master/.bash_profile)
+and [.bash_prompt](https://github.com/ericgoodwin/dotfiles/blob/master/.bash_prompt).
 
 
 Aliases
 -------
 
-Check out [.aliases](https://github.com/gf3/dotfiles/blob/master/.aliases)
+Check out [.aliases](https://github.com/ericgoodwin/dotfiles/blob/master/.aliases)
 
 
 Scripts
@@ -183,10 +117,10 @@ Git
 
 I've included some handy git script additions as well as configution changes.
 Have a look at
-[.gitconfig](https://github.com/gf3/dotfiles/blob/master/.gitconfig) to see
+[.gitconfig](https://github.com/ericgoodwin/dotfiles/blob/master/.gitconfig) to see
 various aliases and settings.
 
-Additional scripts (see [.scripts](https://github.com/gf3/dotfiles/tree/master/.scripts/) directory for source):
+Additional scripts (see [.scripts](https://github.com/ericgoodwin/dotfiles/tree/master/.scripts/) directory for source):
 
 * git-publish-branch
 * git-rank-contributors
@@ -207,6 +141,4 @@ Sensible configurations exist for:
 * Git
 * IRB
 * TMUX
-* Vim
-* GVim / MacVim
 

@@ -1,5 +1,5 @@
 [ui]
-username = Gianni Chiappetta <gianni@runlevel6.org>
+username = Eric Goodwin <eric@ericgoodwin.com>
 ssh = ssh -C
 ignore = ~/.hgignore
 editor = vim
