@@ -5,6 +5,9 @@ alias ....='cd ../../..'
 alias ~='cd ~'
 alias ll='tree --dirsfirst -ChFupDaLg 1'
 
+alias showhidden='defaults write com.apple.Finder AppleShowAllFiles YES'
+alias hidehidden='defaults write com.apple.Finder AppleShowAllFiles NO'
+
 # Utilities
 alias a="ack -ia"
 alias b="bundle exec"
@@ -45,7 +48,7 @@ alias lc='lein repl'
 alias li='lein install org.clojure/'
 
 # RAILS
-alias rails='bundle exec rails' 
+alias rails='bundle exec rails'
 alias rc='bundle exec rails c'
 alias rs='bundle exec rails s -p 3000'
 alias be='bundle exec'
@@ -66,4 +69,3 @@ alias ssstop="bundle exec rake sunspot:solr:stop"
 alias ssindex="bundle exec rake sunspot:solr:reindex"
 alias rspec="bundle exec rspec"
 alias spec="bundle exec rake spec"
-

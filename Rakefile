@@ -85,7 +85,7 @@ namespace :install do
     package_source = '~/.dotfiles/.sublime_packages'
     package_target = '~/Library/Application\ Support/Sublime\ Text\ 2/Packages'
 
-    system "rm #{package_target}"
+    system "rm -rf #{package_target}"
     system "ln -sF #{package_source} #{package_target}"
 
     puts "\n\n\n##################################################"

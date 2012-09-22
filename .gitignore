@@ -1,2 +1,4 @@
 *.chback
 .DS_Store
+*.cache
+*.pyc

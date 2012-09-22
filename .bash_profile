@@ -7,6 +7,8 @@ export HISTSIZE=10000
 
 PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 
+# Postgres Path for pg_restore etc ...
+PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
+
 # Common junk
 [[ -s "$HOME/.commonrc" ]] && source "$HOME/.commonrc"
-
