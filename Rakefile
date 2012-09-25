@@ -48,7 +48,7 @@ namespace :install do
 
   desc 'Install required brew formulae'
   task :formulae do
-    %w(git node solr).each do |f|
+    %w(git node solr leiningen clojure).each do |f|
       system "brew install #{f}"
     end
   end
