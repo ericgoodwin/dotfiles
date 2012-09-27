@@ -50,7 +50,7 @@ alias li='lein install org.clojure/'
 # RAILS
 alias rails='bundle exec rails'
 alias rc='bundle exec rails c'
-alias rs='bundle exec rails s -p 3000'
+alias rs='bundle exec rails s'
 alias be='bundle exec'
 alias bi='bundle install --without=production'
 alias migrateonly='bundle exec rake db:migrate'
