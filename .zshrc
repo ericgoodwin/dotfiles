@@ -45,5 +45,9 @@ PATH="/usr/local/bin:/usr/local/sbin:$PATH"
 # Postgres Path for pg_restore etc ...
 PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 
+# Android
+ANDROIDSDK="$HOME/Work/Android"
+PATH="$ANDROIDSDK/tools:$ANDROIDSDK/platform-tools:$PATH"
+
 # Common junk
 [[ -s "$HOME/.commonrc" ]] && source "$HOME/.commonrc"
