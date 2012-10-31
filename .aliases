@@ -5,8 +5,13 @@ alias ....='cd ../../..'
 alias ~='cd ~'
 alias ll='tree --dirsfirst -ChFupDaLg 1'
 
+alias sniff="sudo ngrep -W byline -d 'en1' -t '^(GET|POST) ' 'tcp and port 80'"
+
 alias showhidden='defaults write com.apple.Finder AppleShowAllFiles YES'
 alias hidehidden='defaults write com.apple.Finder AppleShowAllFiles NO'
+
+# Android
+alias chromeremote="adb forward tcp:9222 localabstract:chrome_devtools_remote"
 
 # Utilities
 alias a="ack -ia"
