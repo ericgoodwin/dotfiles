@@ -5,7 +5,6 @@ Prerequisites
 -------------
 
 * Git (1.7+)
-* Mercurial (1.6+)
 * Ruby (1.9 recommended) and RubyGems
 * Tree
 
@@ -19,12 +18,19 @@ Optional, but recommended:
 Bootstrapper
 ------------
 
+
+
 The bootstrapper depends on three things: ruby, rake, and bundler. Assuming you
 have ruby and ruby gems installed on your system: `gem install rake bundler`.
 
 Then:
 
 ``` bash-session
+$ gem install rake bundler
+$ ruby -e "$(curl -fsSkL raw.github.com/mxcl/homebrew/go)"
+$ brew update
+$ brew install git tree rbenv ruby-build
+$ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 $ zsh < <( curl https://raw.github.com/ericgoodwin/dotfiles/master/bootstrap.sh )
 ```
 
