@@ -30,7 +30,6 @@ alias tmux="tmux -2"
 
 # Git Aliases
 alias gst='git status'
-alias gl='git pull'
 alias gp='git push'
 alias gph='git push heroku'
 alias gd='git diff | mate'
@@ -43,7 +42,7 @@ alias git co='git checkout'
 alias diffp='git log --stat production..master' 	# see the differences between production and master
 alias notpushed='git cherry -v origin' 						# see the all commits that I haven't pushed yet
 alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
-alias gitlogold='git log --pretty=oneline --abbrev-commit'
+alias gl='git log --pretty=oneline --abbrev-commit'
 
 # REDIS
 alias redis='redis-cli'
